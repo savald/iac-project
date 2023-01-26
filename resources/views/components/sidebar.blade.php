@@ -5,8 +5,8 @@
     </a>
 
     <ul class="sidebar-nav">
-      <li class="sidebar-item active">
-        <a class="sidebar-link" href="index.html">
+      <li class="sidebar-item">
+        <a class="sidebar-link" href="{{ url('/') }}">
           <i class="align-middle" data-feather="home"></i> <span class="align-middle">Dashboard</span>
         </a>
       </li>
@@ -14,22 +14,48 @@
       <li class="sidebar-item">
         <a class="sidebar-link" href="javascript();" data-bs-toggle="collapse" data-bs-target="#formCollapse"
           aria-expanded="false" aria-controls="formCollapse">
-          <i class="align-middle" data-feather="edit"></i> <span class="align-middle">Pencatatan</span>
+          <i class="align-middle" data-feather="edit"></i> <span class="align-middle">Form FSW</span>
         </a>
 
         <div class="collapse" id="formCollapse">
-          <div class="card card-body mx-3 p-1">
-            <ul class="">
-              <li class="my-3"><a href="#" class="text-decoration-none text-secondary">Form Penjangkauan</a></li>
-              <li class="my-3"><a href="#" class="text-decoration-none text-secondary">Form CBS</a></li>
-              <li class="my-3"><a href="#" class="text-decoration-none text-secondary">Form Monitoring PSP+</a></li>
-              <li class="my-3"><a href="#" class="text-decoration-none text-secondary">Form Notifikasi Pasangan</a></li>
-              <li class="my-3"><a href="#" class="text-decoration-none text-secondary">Form Data Pribadi</a></li>
-              <li class="my-3"><a href="#" class="text-decoration-none text-secondary">Form Rujukan</a></li>
-              <li class="my-3"><a href="#" class="text-decoration-none text-secondary">Form Inisiasi ARV</a></li>
-              <li class="my-3"><a href="#" class="text-decoration-none text-secondary">Form Retensi ARV</a></li>
-              <li class="my-3"><a href="#" class="text-decoration-none text-secondary">Form Bukti Rujukan Kembali ARV</a></li>
-              <li class="my-3"><a href="#" class="text-decoration-none text-secondary">Form Temuan Kasus</a></li>
+          <div class="card card-body ms-4 me-3 p-1">
+            <ul class="list-items">
+              <li>
+                <a href="{{ url('form-fsw/data-pribadi') }}" class="text-decoration-none">Data Pribadi</a>
+              </li>
+              <li>
+                <a href="{{ url('form-fsw/pemetaan') }}" class="text-decoration-none">Pemetaan</a>
+              </li>
+              <li>
+                <a href="{{ url('form-fsw/penjangkauan') }}" class="text-decoration-none">Penjangkauan</a>
+              </li>
+              <li>
+                <a href="{{ url('form-fsw/rujukan-tes') }}" class="text-decoration-none">Rujukan Tes</a>
+              </li>
+              <li>
+                <a href="{{ url('form-fsw/cbs') }}" class="text-decoration-none">CBS</a>
+              </li>
+              <li>
+                <a href="{{ url('form-fsw/konfirmasi-cbs') }}" class="text-decoration-none">Konfirmasi CBS</a>
+              </li>
+              <li>
+                <a href="{{ url('form-fsw/temuan-kasus') }}" class="text-decoration-none">Temuan Kasus</a>
+              </li>
+              <li>
+                <a href="{{ url('form-fsw/inisiasi-arv') }}" class="text-decoration-none">Inisiasi ARV</a>
+              </li>
+              <li>
+                <a href="{{ url('form-fsw/retensi-arv') }}" class="text-decoration-none">Retensi ARV</a>
+              </li>
+              <li>
+                <a href="{{ url('form-fsw/reinisiasi-arv') }}" class="text-decoration-none">Reinisiasi ARV</a>
+              </li>
+              <li>
+                <a href="{{ url('form-fsw/partner-notifikasi') }}" class="text-decoration-none">Partner Notifikasi</a>
+              </li>
+              <li>
+                <a href="{{ url('form-fsw/viral-load') }}" class="text-decoration-none">Viral Load</a>
+              </li>
             </ul>
           </div>
         </div>

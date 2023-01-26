@@ -4,11 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class RujukanTesController extends Controller
 {
   public function index()
   {
-    // return 'home';
-    return view('pages.dashboard');
+    return view('pages.form_fsw.rujukan-tes');
   }
 }
