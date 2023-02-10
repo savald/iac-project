@@ -8,6 +8,6 @@ class TemuanKasusController extends Controller
 {
     public function index()
   {
-    return view('pages.form_fsw.temuan-kasus');
+    return view('pages.form-fsw.temuan-kasus');
   }
 }

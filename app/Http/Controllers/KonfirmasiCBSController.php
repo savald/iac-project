@@ -8,6 +8,6 @@ class KonfirmasiCBSController extends Controller
 {
     public function index()
   {
-    return view('pages.form_fsw.konfirmasi-cbs');
+    return view('pages.form-fsw.konfirmasi-cbs');
   }
 }

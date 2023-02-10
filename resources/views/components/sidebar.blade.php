@@ -1,67 +1,108 @@
-<nav id="sidebar" class="sidebar js-sidebar">
-  <div class="sidebar-content js-simplebar">
-    <a class="sidebar-brand" href="{{ url('/') }}">
-      <span class="align-middle">IAC</span>
+<nav id="sidebar" aria-label="Main Navigation">
+  <div class="content-header">
+    <a class="fw-semibold text-dual" href="{{ url('/') }}">
+      <span class="smini-visible">
+        <i class="fa fa-circle-notch text-primary"></i>
+      </span>
+      <span class="smini-hide fs-5 tracking-wider">IAC</span>
     </a>
+    <div>
+      <button type="button" class="btn btn-sm btn-alt-secondary" data-toggle="layout" data-action="dark_mode_toggle">
+        <i class="far fa-moon"></i>
+      </button>
+      <a class="d-lg-none btn btn-sm btn-alt-secondary ms-1" data-toggle="layout" data-action="sidebar_close"
+        href="javascript:void(0)">
+        <i class="fa fa-fw fa-times"></i>
+      </a>
+    </div>
+  </div>
 
-    <ul class="sidebar-nav">
-      <li class="sidebar-item">
-        <a class="sidebar-link" href="{{ url('/') }}">
-          <i class="align-middle" data-feather="home"></i> <span class="align-middle">Dashboard</span>
-        </a>
-      </li>
-
-      <li class="sidebar-item">
-        <a class="sidebar-link" href="javascript();" data-bs-toggle="collapse" data-bs-target="#formCollapse"
-          aria-expanded="false" aria-controls="formCollapse">
-          <i class="align-middle" data-feather="edit"></i> <span class="align-middle">Form FSW</span>
-        </a>
-
-        <div class="collapse" id="formCollapse">
-          <div class="card card-body ms-4 me-3 p-1">
-            <ul class="list-items">
-              <li>
-                <a href="{{ url('form-fsw/data-pribadi') }}" class="text-decoration-none">Data Pribadi</a>
-              </li>
-              <li>
-                <a href="{{ url('form-fsw/pemetaan') }}" class="text-decoration-none">Pemetaan</a>
-              </li>
-              <li>
-                <a href="{{ url('form-fsw/penjangkauan') }}" class="text-decoration-none">Penjangkauan</a>
-              </li>
-              <li>
-                <a href="{{ url('form-fsw/rujukan-tes') }}" class="text-decoration-none">Rujukan Tes</a>
-              </li>
-              <li>
-                <a href="{{ url('form-fsw/cbs') }}" class="text-decoration-none">CBS</a>
-              </li>
-              <li>
-                <a href="{{ url('form-fsw/konfirmasi-cbs') }}" class="text-decoration-none">Konfirmasi CBS</a>
-              </li>
-              <li>
-                <a href="{{ url('form-fsw/temuan-kasus') }}" class="text-decoration-none">Temuan Kasus</a>
-              </li>
-              <li>
-                <a href="{{ url('form-fsw/inisiasi-arv') }}" class="text-decoration-none">Inisiasi ARV</a>
-              </li>
-              <li>
-                <a href="{{ url('form-fsw/retensi-arv') }}" class="text-decoration-none">Retensi ARV</a>
-              </li>
-              <li>
-                <a href="{{ url('form-fsw/reinisiasi-arv') }}" class="text-decoration-none">Reinisiasi ARV</a>
-              </li>
-              <li>
-                <a href="{{ url('form-fsw/partner-notifikasi') }}" class="text-decoration-none">Partner Notifikasi</a>
-              </li>
-              <li>
-                <a href="{{ url('form-fsw/viral-load') }}" class="text-decoration-none">Viral Load</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </li>
-
-    </ul>
-
+  <div class="js-sidebar-scroll">
+    <!-- Side Navigation -->
+    <div class="content-side">
+      <ul class="nav-main">
+        <li class="nav-main-item">
+          <a class="nav-main-link" href="{{ url('/') }}">
+            <i class="nav-main-link-icon si si-speedometer"></i>
+            <span class="nav-main-link-name">DASHBOARD</span>
+          </a>
+        </li>
+        <li class="nav-main-item">
+          <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true"
+            aria-expanded="false" href="#">
+            <i class="nav-main-link-icon si si-note"></i>
+            <span class="nav-main-link-name">FORM FSW</span>
+          </a>
+          <ul class="nav-main-submenu">
+            <li class="nav-main-item">
+              <a class="nav-main-link" href="{{ route('pemetaan') }}">
+                <span class="nav-main-link-name">Pemetaan</span>
+              </a>
+            </li>
+            <li class="nav-main-item">
+              <a class="nav-main-link" href="{{ route('data-pribadi') }}">
+                <span class="nav-main-link-name">Data Pribadi</span>
+              </a>
+            </li>
+            <li class="nav-main-item">
+              <a class="nav-main-link" href="{{ route('penjangkauan') }}" id="linkPenjangkauan">
+                <span class="nav-main-link-name">Penjangkauan</span>
+              </a>
+            </li>
+            <li class="nav-main-item">
+              <a class="nav-main-link" href="{{ route('rujukan-tes') }}">
+                <span class="nav-main-link-name">Rujukan Tes</span>
+              </a>
+            </li>
+            <li class="nav-main-item">
+              <a class="nav-main-link" href="{{ route('cbs') }}">
+                <span class="nav-main-link-name">CBS</span>
+              </a>
+            </li>
+            <li class="nav-main-item">
+              <a class="nav-main-link" href="{{ route('konfirmasi-cbs') }}">
+                <span class="nav-main-link-name">Konfirmasi CBS</span>
+              </a>
+            </li>
+            <li class="nav-main-item">
+              <a class="nav-main-link" href="{{ route('temuan-kasus') }}">
+                <span class="nav-main-link-name">Temuan Kasus</span>
+              </a>
+            </li>
+            <li class="nav-main-item">
+              <a class="nav-main-link" href="{{ route('inisiasi-arv') }}">
+                <span class="nav-main-link-name">Inisiasi ARV</span>
+              </a>
+            </li>
+            <li class="nav-main-item">
+              <a class="nav-main-link" href="{{ route('retensi-arv') }}">
+                <span class="nav-main-link-name">Retensi ARV</span>
+              </a>
+            </li>
+            <li class="nav-main-item">
+              <a class="nav-main-link" href="{{ route('reinisiasi-arv') }}">
+                <span class="nav-main-link-name">Reinisiasi ARV</span>
+              </a>
+            </li>
+            <li class="nav-main-item">
+              <a class="nav-main-link" href="{{ route('partner-notifikasi') }}">
+                <span class="nav-main-link-name">Partner Notifikasi</span>
+              </a>
+            </li>
+            <li class="nav-main-item">
+              <a class="nav-main-link" href="{{ route('viral-load') }}">
+                <span class="nav-main-link-name">Viral Load</span>
+              </a>
+            </li>
+            <li class="nav-main-item">
+              <a class="nav-main-link" href="{{ route('monitoring-psp') }}">
+                <span class="nav-main-link-name">Monitoring PSP+</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- END Side Navigation -->
   </div>
 </nav>

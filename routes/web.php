@@ -6,14 +6,17 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DataPribadiController;
 use App\Http\Controllers\InisiasiARVController;
 use App\Http\Controllers\KonfirmasiCBSController;
+use App\Http\Controllers\MonitoringPSPController;
 use App\Http\Controllers\PartnerNotifikasiController;
 use App\Http\Controllers\PemetaanController;
 use App\Http\Controllers\PenjangkauanController;
+use App\Http\Controllers\PuskesmasController;
 use App\Http\Controllers\ReinisiasiARVController;
 use App\Http\Controllers\RetensiARVController;
 use App\Http\Controllers\RujukanTesController;
 use App\Http\Controllers\TemuanKasusController;
 use App\Http\Controllers\ViralLoadController;
+use App\Http\Middleware\EnsureGoToForm;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,22 +33,25 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [DashboardController::class, 'index']);
 
 Route::prefix('form-fsw')->group(function () {
-  Route::get('/data-pribadi', [DataPribadiController::class, 'index']);
-  Route::get('/pemetaan', [PemetaanController::class, 'index']);
-  Route::get('/penjangkauan', [PenjangkauanController::class, 'index']);
-  Route::get('/rujukan-tes', [RujukanTesController::class, 'index']);
-  Route::get('/cbs', [CBSController::class, 'index']);
-  Route::get('/konfirmasi-cbs', [KonfirmasiCBSController::class, 'index']);
-  Route::get('/temuan-kasus', [TemuanKasusController::class, 'index']);
-  Route::get('/inisiasi-arv', [InisiasiARVController::class, 'index']);
-  Route::get('/retensi-arv', [RetensiARVController::class, 'index']);
-  Route::get('/reinisiasi-arv', [ReinisiasiARVController::class, 'index']);
-  Route::get('/partner-notifikasi', [PartnerNotifikasiController::class, 'index']);
-  Route::get('/viral-load', [ViralLoadController::class, 'index']);
+  Route::get('/data-pribadi', [DataPribadiController::class, 'index'])->name('data-pribadi');
+  Route::get('/pemetaan', [PemetaanController::class, 'index'])->name('pemetaan');
+  Route::get('/penjangkauan', [PenjangkauanController::class, 'index'])->name('penjangkauan')->middleware(EnsureGoToForm::class);
+  Route::get('/rujukan-tes', [RujukanTesController::class, 'index'])->name('rujukan-tes');
+  Route::get('/cbs', [CBSController::class, 'index'])->name('cbs');
+  Route::get('/konfirmasi-cbs', [KonfirmasiCBSController::class, 'index'])->name('konfirmasi-cbs');
+  Route::get('/temuan-kasus', [TemuanKasusController::class, 'index'])->name('temuan-kasus');
+  Route::get('/inisiasi-arv', [InisiasiARVController::class, 'index'])->name('inisiasi-arv');
+  Route::get('/retensi-arv', [RetensiARVController::class, 'index'])->name('retensi-arv');
+  Route::get('/reinisiasi-arv', [ReinisiasiARVController::class, 'index'])->name('reinisiasi-arv');
+  Route::get('/partner-notifikasi', [PartnerNotifikasiController::class, 'index'])->name('partner-notifikasi');
+  Route::get('/viral-load', [ViralLoadController::class, 'index'])->name('viral-load');
+  Route::get('/monitoring-psp', [MonitoringPSPController::class, 'index'])->name('monitoring-psp');
 });
 
 Route::prefix('save')->group(function () {
-  Route::post('/data-pribadi', [DataPribadiController::class, 'saveDataPribadi'])->name('data-pribadi');
+  Route::post('/data-pribadi', [DataPribadiController::class, 'saveDataPribadi'])->name('save.pribadi');
+  Route::post('/penjangkauan', [PenjangkauanController::class, 'savePenjangkauan'])->name('save.penjangkauan');
+  Route::post('/pemetaan', [PemetaanController::class, 'savePemetaan'])->name('save.pemetaan');
 });
 
 Route::post('/get-kabupaten', [DaerahController::class, 'getKabupaten'])->name('get-kabupaten');

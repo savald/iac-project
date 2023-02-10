@@ -8,6 +8,6 @@ class CBSController extends Controller
 {
     public function index()
   {
-    return view('pages.form_fsw.cbs');
+    return view('pages.form-fsw.cbs');
   }
 }

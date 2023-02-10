@@ -1,24 +1,13 @@
-<footer class="footer">
-  <div class="container-fluid">
-    <div class="row text-muted">
-      <div class="col-6 text-start">
-        <p class="mb-0">
-          <a class="text-muted" href="#" target="_blank"><strong>2023</strong></a>
-          &copy;
-        </p>
+<footer id="page-footer" class="bg-body-light">
+  <div class="content py-3">
+    <div class="row fs-sm">
+      <div class="col-sm-6 order-sm-2 py-1 text-center text-sm-end">
+        Crafted with <i class="fa fa-heart text-danger"></i> by <a class="fw-semibold" href="https://1.envato.market/ydb"
+          target="_blank">pixelcave</a>
       </div>
-      <div class="col-6 text-end">
-        <ul class="list-inline">
-          <li class="list-inline-item">
-            <a class="text-muted" href="#" target="_blank">About</a>
-          </li>
-          <li class="list-inline-item">
-            <a class="text-muted" href="#" target="_blank">Team </a>
-          </li>
-          <li class="list-inline-item">
-            <a class="text-muted" href="#" target="_blank">Contact</a>
-          </li>
-        </ul>
+      <div class="col-sm-6 order-sm-1 py-1 text-center text-sm-start">
+        <a class="fw-semibold" href="https://1.envato.market/AVD6j" target="_blank">OneUI 5.5</a> &copy; <span
+          data-toggle="year-copy"></span>
       </div>
     </div>
   </div>

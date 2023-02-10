@@ -8,6 +8,6 @@ class InisiasiARVController extends Controller
 {
     public function index()
   {
-    return view('pages.form_fsw.inisiasi-arv');
+    return view('pages.form-fsw.inisiasi-arv');
   }
 }

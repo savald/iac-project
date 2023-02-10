@@ -8,6 +8,6 @@ class RujukanTesController extends Controller
 {
   public function index()
   {
-    return view('pages.form_fsw.rujukan-tes');
+    return view('pages.form-fsw.rujukan-tes');
   }
 }

@@ -8,6 +8,6 @@ class ReinisiasiARVController extends Controller
 {
     public function index()
   {
-    return view('pages.form_fsw.reinisiasi-arv');
+    return view('pages.form-fsw.reinisiasi-arv');
   }
 }

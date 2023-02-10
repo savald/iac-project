@@ -8,6 +8,6 @@ class PartnerNotifikasiController extends Controller
 {
     public function index()
   {
-    return view('pages.form_fsw.partner-notifikasi');
+    return view('pages.form-fsw.partner-notifikasi');
   }
 }

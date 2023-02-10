@@ -8,6 +8,6 @@ class ViralLoadController extends Controller
 {
     public function index()
   {
-    return view('pages.form_fsw.viral-load');
+    return view('pages.form-fsw.viral-load');
   }
 }
